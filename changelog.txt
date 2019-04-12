@@ -1,2 +1,16 @@
 Day 1:
 Created goals and almost finished Project Proposal.
+Idea for millisecond function:
+q = new Date();
+a = q.getMilliseconds();
+console.log("wait");
+console.log("wait");
+console.log("wait");
+
+
+w = new Date();
+b = w.getMilliseconds();
+
+console.log("Time when prompted: " + a);
+console.log("Time when pressed: " + b);
+console.log("Time took: " + b - a);
