@@ -1,9 +1,25 @@
-div.TestArea {
-  background-color: #219eff;
+div.TestAreaBlue {
+  background-color: blue;
   width: 1920px;
   height: 1080px;
   line-height: 960px;
 }
+
+
+div.TestArea {
+  background-color: white;
+  width: 1920px;
+  height: 1080px;
+  line-height: 960px;
+}
+
+div.TestAreaRed {
+  background-color: red;
+  width: 1920px;
+  height: 1080px;
+  line-height: 960px;
+}
+
 
 p#Start {
   color: black;
