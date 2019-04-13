@@ -17,4 +17,5 @@ Idea for millisecond function:
 
 Added main html and css components.
 Added click functionality in javascript
-
+Version: 0.2.0
+~End of Day 1~
