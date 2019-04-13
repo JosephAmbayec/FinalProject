@@ -1,0 +1,22 @@
+div.TestArea {
+  background-color: #219eff;
+  width: 1920px;
+  height: 1080px;
+  line-height: 960px;
+}
+
+p#Start {
+  color: black;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  text-align: center;
+  font-size: 45px;
+  left: 25%;
+  right: 25%;
+  overflow: visible;
+}
+
+p {
+  color: black;
+}
