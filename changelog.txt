@@ -1,21 +1,23 @@
-Day 1:
-Created goals and almost finished Project Proposal.
-Idea for millisecond function:
-			q = new Date();
-			a = q.getMilliseconds();
-			console.log("wait");
-			console.log("wait");
-			console.log("wait");
+~Start of Day 1~
+
+	Created goals and almost finished Project Proposal.
+	Idea for millisecond function:
+				q = new Date();
+				a = q.getMilliseconds();
+				console.log("wait");
+				console.log("wait");
+				console.log("wait");
 
 
-			w = new Date();
-			b = w.getMilliseconds();
+				w = new Date();
+				b = w.getMilliseconds();
 
-			console.log("Time when prompted: " + a);
-			console.log("Time when pressed: " + b);
-			console.log("Time took: " + b - a);
+				console.log("Time when prompted: " + a);
+				console.log("Time when pressed: " + b);
+				console.log("Time took: " + b - a);
 
-Added main html and css components.
-Added click functionality in javascript
-Version: 0.2.0
+	Added main html and css components.
+	Added click functionality in javascript
+	Version: 0.2.0
+
 ~End of Day 1~
