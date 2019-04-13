@@ -27,8 +27,8 @@ Version: 0.2.0
 
 Added a better colour switching mechanism
 Debugging
-Confused and frustated
+Working switch between red and blue!
 
-Version: 0.3.2
+Version: 0.3.9
 
 ~End of Day 2~

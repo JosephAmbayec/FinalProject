@@ -13,24 +13,30 @@ function ChangeClassColor(colorName, oldName){
   x = document.querySelector("div" + '.' + colorName);
 
 
-  console.log(colorName);
   return colorName;
+  return oldName
 }
 
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
 
 x.onclick = function switchColor(){
-  if (colorName == "TestAreaBlue"){
-      ChangeClassColor("TestAreaRed", "TestAreaBlue");
-      y.innerHTML = "Wait for the green to appear!";
 
-  }
-
-  else if (colorName == "TestAreaRed") {
+ if (colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
       ChangeClassColor("TestAreaBlue", "TestAreaRed");
       y.innerHTML = "Click too early, try again!";
+      colorName = "TestAreaBlue"
 
-  
+
+  }
+ else if (colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
+      ChangeClassColor("TestAreaRed", "TestAreaBlue");
+      colorName = "TestAreaRed"
+      y.innerHTML = "Wait for the green to appear!";
+
+
     }
+  else{
+    console.log("Nothing")
+  }
 }
