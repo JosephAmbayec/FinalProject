@@ -1,38 +1,44 @@
 div.TestAreaBlue {
-  background-color: blue;
-  width: 1920px;
-  height: 1080px;
-  line-height: 960px;
+  background-color: #5495ff;
+  display: inline-block;
+  width: 800px;
+  height: 600px;
+  line-height: 400px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 
 div.TestArea {
   background-color: white;
-  width: 1920px;
-  height: 1080px;
-  line-height: 960px;
+  display: inline-block;
+  width: 800px;
+  height: 600px;
+  line-height: 400;
+  border-radius: 10px;
+  text-align: center;
+
 }
 
 div.TestAreaRed {
-  background-color: red;
-  width: 1920px;
-  height: 1080px;
-  line-height: 960px;
+  background-color: #fc4137;
+  display: inline-block;
+  width: 800px;
+  height: 600px;
+  line-height: 400px;
+  border-radius: 10px;
+  text-align: center;
+
 }
 
 
 p#Start {
-  color: black;
+  color: #f9f7f7;
   display: inline-block;
   vertical-align: middle;
   position: absolute;
-  text-align: center;
   font-size: 45px;
-  left: 25%;
-  right: 25%;
   overflow: visible;
-}
-
-p {
-  color: black;
+  margin-left: -18%;
 }

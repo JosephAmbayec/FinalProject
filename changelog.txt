@@ -1,3 +1,13 @@
+Joseph A Computer Programming
+Reaction Test
+
+Goals and Features wanted:
+-Timing
+-Random intervals between colours
+-Allow for different input types (kb and m)
+-Award and pop-up system (Maybe could be difficult)
+-Optimized, fast, fun, simple, modern, etc.
+
 
 ~Start of Day 1~
 
@@ -32,3 +42,12 @@ Working switch between red and blue!
 Version: 0.3.9
 
 ~End of Day 2~
+
+~Start of Day 3~
+
+Added better margin flow and colours allowing
+for resizable button while coding!
+
+Version: 0.4.3
+
+~End of Day 3~
