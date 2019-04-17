@@ -18,7 +18,7 @@ window.addEventListener('resize',function(){
     rheight = parseInt(rheight);
     lheight = Math.floor(rheight/50);
     elem.style.lineHeight = lheight;
-}});
+};});
 
 
 
@@ -60,4 +60,4 @@ x.onclick = function switchColor(){
 }
 
 
-function recenter();
+recenter();
