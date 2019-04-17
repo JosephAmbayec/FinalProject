@@ -61,7 +61,8 @@ Handed in project proposal.
 
 Added resizable text and button areas!
 Button changes to size of browser! (Chrome only)
+Auto recenter text!
 
-Version: 0.5.0
+Version: 0.5.5
 
 ~End of April 16~
