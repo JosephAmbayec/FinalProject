@@ -7,9 +7,7 @@ var oldName;
 
 //Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
 //Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
-
 //Function allows for recenter text
-
 function recenter(){
   var elem  = document.querySelector('div')
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
@@ -44,7 +42,7 @@ x.onclick = function switchColor(){
 
  if (colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
       ChangeClassColor("TestAreaBlue", "TestAreaRed");
-      y.innerHTML = "Click too early, try again!";
+      y.innerHTML = "Clicked too early, try again!";
       colorName = "TestAreaBlue"
 
 
