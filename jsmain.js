@@ -15,18 +15,8 @@ function recenter(){
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
   var rheight  = innerHeight;
   rheight = parseInt(rheight);
-  var lineheight = 25;
-  var divideby;
-  var setlineheight;
-  var divideby = Math.floor(rheight/lineheight);
-  var setlineheight = Math.floor(rheight/divideby)
-
-  elem.style.lineHeight = setlineheight;
-  console.log(setlineheight);
-
-
-
-
+  lheight = Math.floor(rheight/50);
+  elem.style.lineHeight = lheight;
 }
 window.addEventListener('resize',function(){
   recenter()
