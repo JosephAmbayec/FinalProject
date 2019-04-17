@@ -9,16 +9,18 @@ var oldName;
 //Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
 
 //Function allows for recenter text
-window.addEventListener('resize',function(){
 
-  function recenter(){
-    var elem  = document.querySelector('div')
-    var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
-    var rheight  = innerHeight;
-    rheight = parseInt(rheight);
-    lheight = Math.floor(rheight/50);
-    elem.style.lineHeight = lheight;
-};});
+function recenter(){
+  var elem  = document.querySelector('div')
+  var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
+  var rheight  = innerHeight;
+  rheight = parseInt(rheight);
+  lheight = Math.floor(rheight/50);
+  elem.style.lineHeight = lheight;
+}
+window.addEventListener('resize',function(){
+  recenter()
+});
 
 
 
