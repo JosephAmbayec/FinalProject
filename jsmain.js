@@ -10,13 +10,15 @@ var oldName;
 
 //Function allows for recenter text
 window.addEventListener('resize',function(){
-  var elem  = document.querySelector('div')
-  var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
-  var rheight  = innerHeight;
-  rheight = parseInt(rheight);
-  lheight = Math.floor(rheight/50);
-  elem.style.lineHeight = lheight;
-});
+
+  function recenter(){
+    var elem  = document.querySelector('div')
+    var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
+    var rheight  = innerHeight;
+    rheight = parseInt(rheight);
+    lheight = Math.floor(rheight/50);
+    elem.style.lineHeight = lheight;
+}});
 
 
 
@@ -56,3 +58,6 @@ x.onclick = function switchColor(){
     console.log("Nothing")
   }
 }
+
+
+function recenter();
