@@ -5,6 +5,19 @@ var w = Math.floor(Math.random() * 5) + 1;
 var colorName;
 var oldName;
 
+
+
+
+
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
+
+
 //Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
 //Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
 //Function allows for recenter text
@@ -20,7 +33,18 @@ window.addEventListener('resize',function(){
   recenter()
 });
 
+function changetoRed(){
+  ChangeClassColor("TetAreaRed", "TestAreaBlue");
+  colorName = "TestAreaRed"
+  y.innerHTML = "Wait for the green to appear!";
+}
 
+function changetoBlue(text){
+  ChangeClassColor("TestAreaBlue", "TestAreaRed");
+  y.innerHTML = text;
+  colorName = "TestAreaBlue"
+
+}
 
 
 
@@ -38,30 +62,20 @@ function ChangeClassColor(colorName, oldName){
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
 
-function switchColor(){
+x.onclick = function switchColor(){
 
- if (x.click && colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
-      ChangeClassColor("TestAreaBlue", "TestAreaRed");
-      y.innerHTML = "Clicked too early, try again!";
-      colorName = "TestAreaBlue"
+ if (colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
+      changetoBlue("Clicked too early!")
 
 
   }
- else if (x.click && colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
-      ChangeClassColor("TestAreaRed", "TestAreaBlue");
-      colorName = "TestAreaRed"
-      y.innerHTML = "Wait for the green to appear!";
+ else if (colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
 
 
+      changetoRed()
     }
 
- else if (x.click && colorName == "TestAreaGreen" && colorName != "TextAreaRed"){
-      ChangeClassColor("TestAreaBlue", "TestAreaGreen");
-      colorName = "TestAreaBlue"
-      y.innerHTML = "Nice job";
 
-
-    }
 
   else{
     console.log("Nothing")
