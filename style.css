@@ -39,6 +39,6 @@ p#Start {
   vertical-align: middle;
   position: relative;
   font-size: 45px;
-  overflow: visible;
+  overflow: hidden;
 
 }
