@@ -1,8 +1,8 @@
 div.TestAreaBlue {
   background-color: #5495ff;
   display: inline-block;
-  width: 800px;
-  height: 600px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   line-height: 400px;
   border-radius: 10px;
   text-align: center;
@@ -24,8 +24,8 @@ div.TestArea {
 div.TestAreaRed {
   background-color: #fc4137;
   display: inline-block;
-  width: 800px;
-  height: 600px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   line-height: 400px;
   border-radius: 10px;
   text-align: center;
@@ -37,8 +37,8 @@ p#Start {
   color: #f9f7f7;
   display: inline-block;
   vertical-align: middle;
-  position: absolute;
+  position: relative;
   font-size: 45px;
   overflow: visible;
-  margin-left: -18%;
+
 }

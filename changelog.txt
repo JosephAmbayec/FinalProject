@@ -57,4 +57,11 @@ Handed in project proposal.
 
 ~End of April 15~
 
+~Start of April 16~
 
+Added resizable text and button areas!
+Button changes to size of browser! (Chrome only)
+
+Version: 0.5.0
+
+~End of April 16~
