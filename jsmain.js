@@ -22,7 +22,7 @@ function recenter(){
   var setlineheight = Math.floor(rheight/divideby)
 
   elem.style.lineHeight = setlineheight;
-
+  console.log(setlineheight);
 
 
 
