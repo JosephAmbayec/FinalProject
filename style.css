@@ -3,7 +3,6 @@ div.TestAreaBlue {
   display: inline-block;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-  line-height: 400px;
   border-radius: 10px;
   text-align: center;
   vertical-align: middle;
@@ -26,11 +25,28 @@ div.TestAreaRed {
   display: inline-block;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-  line-height: 400px;
   border-radius: 10px;
   text-align: center;
 
 }
+
+
+div.TestAreaGreen {
+  background-color: #0daf01;
+  display: inline-block;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
 
 
 p#Start {

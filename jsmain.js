@@ -38,26 +38,57 @@ function ChangeClassColor(colorName, oldName){
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
 
-x.onclick = function switchColor(){
+function switchColor(){
 
- if (colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
+ if (x.click && colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
       ChangeClassColor("TestAreaBlue", "TestAreaRed");
       y.innerHTML = "Clicked too early, try again!";
       colorName = "TestAreaBlue"
 
 
   }
- else if (colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
+ else if (x.click && colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
       ChangeClassColor("TestAreaRed", "TestAreaBlue");
       colorName = "TestAreaRed"
       y.innerHTML = "Wait for the green to appear!";
 
 
     }
+
+ else if (x.click && colorName == "TestAreaGreen" && colorName != "TextAreaRed"){
+      ChangeClassColor("TestAreaBlue", "TestAreaGreen");
+      colorName = "TestAreaBlue"
+      y.innerHTML = "Nice job";
+
+
+    }
+
   else{
     console.log("Nothing")
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 recenter();
