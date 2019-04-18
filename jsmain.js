@@ -1,23 +1,26 @@
 //Setting up public vars that will be accessed later on
 var x = document.querySelector("div.TestArea");
 var y = document.querySelector("p#Start");
-var w = Math.floor(Math.random() * 5) + 1;
+var w = Math.floor((Math.random() * 5) + 1) * 1000;
 var colorName;
 var oldName;
-
-
-
-
-
-function wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
+var s;
+var e;
+//Function to start timer
+function timer(){
+  t = e - s;
+  return t;
 }
-
-
+function sTime() {
+   s = new Date();
+   s.getMilliseconds();
+  console.log(s);
+  }
+function eTime(){
+   e = new Date();
+   e.getMilliseconds();
+  console.log(e);
+}
 //Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
 //Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
 //Function allows for recenter text
@@ -34,13 +37,22 @@ window.addEventListener('resize',function(){
 });
 
 function changetoRed(){
-  ChangeClassColor("TetAreaRed", "TestAreaBlue");
+  ChangeClassColor("TestAreaRed", "TestAreaBlue");
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
+
+  setTimeout(function green(){
+    sTime()
+    ChangeClassColor("TestAreaGreen", "TestAreaRed");
+    y.innerHTML = "Click!";
+    colorName = "TestAreaGreen";
+    return s
+  }, w)
+
 }
 
 function changetoBlue(text){
-  ChangeClassColor("TestAreaBlue", "TestAreaRed");
+
   y.innerHTML = text;
   colorName = "TestAreaBlue"
 
@@ -59,48 +71,41 @@ function ChangeClassColor(colorName, oldName){
   return oldName
 }
 
+
+
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
 
 x.onclick = function switchColor(){
 
- if (colorName == "TestAreaRed" && colorName != "TextAreaBlue") {
+ if (colorName == "TestAreaRed" && colorName != "TestAreaBlue") {
+      // When its red and clicked then:
+      ChangeClassColor("TestAreaBlue", "TestAreaRed");
       changetoBlue("Clicked too early!")
 
 
   }
- else if (colorName == "TestAreaBlue" && colorName != "TextAreaRed"){
+ else if (colorName == "TestAreaBlue" && colorName != "TestAreaRed"){
+        // When its blue and clicked then:
 
-
-      changetoRed()
+        changetoRed()
     }
 
+ else if(colorName == "TestAreaGreen" && colorName != "TestAreaRed"){
+      // When its green and clicked then:
+      ChangeClassColor("TestAreaBlue", "TestAreaGreen");
 
+      eTime();
+
+      timer();
+      changetoBlue(t + " ms. Click to go again");
+      return e;
+ }
 
   else{
     console.log("Nothing")
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

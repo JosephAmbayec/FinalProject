@@ -66,3 +66,14 @@ Auto recenter text!
 Version: 0.5.5
 
 ~End of April 16~
+
+~Start of April 17~
+
+Added green
+Added random time interval
+Added timer
+Base javascript is finish (for now)
+
+Version: 0.6.3
+
+~End of April 18~
