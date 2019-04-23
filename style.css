@@ -1,5 +1,6 @@
 div.TestAreaBlue {
   background-color: #5495ff;
+  cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -11,6 +12,7 @@ div.TestAreaBlue {
 
 div.TestArea {
   background-color: white;
+  cursor: pointer;
   display: inline-block;
   width: 800px;
   height: 600px;
@@ -22,6 +24,7 @@ div.TestArea {
 
 div.TestAreaRed {
   background-color: #fc4137;
+  cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -33,6 +36,7 @@ div.TestAreaRed {
 
 div.TestAreaGreen {
   background-color: #0daf01;
+  cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -40,13 +44,6 @@ div.TestAreaGreen {
   text-align: center;
 
 }
-
-
-
-
-
-
-
 
 
 p#Start {

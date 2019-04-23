@@ -82,3 +82,8 @@ Version: 0.6.3
 
 Fixed red to blue bug where green still appeared
 when red was clicked
+Started achievement functionality
+
+Version: 0.7.2
+
+~End of April 23~
