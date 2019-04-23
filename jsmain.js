@@ -1,7 +1,7 @@
 //Setting up public vars that will be accessed later on
 var x = document.querySelector("div.TestArea");
 var y = document.querySelector("p#Start");
-var w = Math.floor((Math.random() * 5) + 1) * 1000;
+var w;
 var colorName;
 var oldName;
 var s;
@@ -37,17 +37,24 @@ window.addEventListener('resize',function(){
 });
 
 function changetoRed(){
+  var w = Math.floor((Math.random() * 5) + 1) * 1000;
   ChangeClassColor("TestAreaRed", "TestAreaBlue");
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
-
+  console.log(w);
   setTimeout(function green(){
-    sTime()
-    ChangeClassColor("TestAreaGreen", "TestAreaRed");
-    y.innerHTML = "Click!";
-    colorName = "TestAreaGreen";
-    return s
-  }, w)
+    if (colorName != "TestAreaBlue"){
+      sTime()
+      ChangeClassColor("TestAreaGreen", "TestAreaRed");
+      y.innerHTML = "Click!";
+      colorName = "TestAreaGreen";
+      return s
+    }
+    else {
+      console.log("Stopped green function");
+    }
+    }, w)
+
 
 }
 

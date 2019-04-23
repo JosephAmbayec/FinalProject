@@ -77,3 +77,8 @@ Base javascript is finish (for now)
 Version: 0.6.3
 
 ~End of April 18~
+
+~Start of April 23~
+
+Fixed red to blue bug where green still appeared
+when red was clicked
