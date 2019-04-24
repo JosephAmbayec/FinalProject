@@ -6,7 +6,8 @@ var colorName;
 var oldName;
 var s;
 var e;
-
+var popbox = document.getElementById('myPopbox');
+var span = document.getElementsByClassName("close")[0];
 //Function to start timer
 function timer(){
   t = e - s;
@@ -86,11 +87,11 @@ function ChangeClassColor(colorName, oldName){
   return oldName
 }
 
-// Function to for achievements
+// Function to for achievements ALSO CREDIT TO W3 FOR POPBOX
 function achieve(){
-  if (t < 500){
+  if (t < 300){
     console.log("Wow you're fast");
-
+    popbox.style.display = "block";
   }
   else {
     // Nothing
@@ -127,6 +128,14 @@ x.onclick = function switchColor(){
       timer();
       achieve()
       changetoBlue(t + " ms. Click to go again");
+      span.onclick = function(){
+        popbox.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == popbox) {
+          popbox.style.display = "none";
+        }
+      }
       return e;
  }
 
