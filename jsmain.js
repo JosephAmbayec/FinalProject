@@ -8,7 +8,7 @@ var s;
 var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
-
+var test;
 
 
 
@@ -57,8 +57,12 @@ function changetoRed(){
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
 
-  setTimeout(function green(){
+
+  var test = setTimeout(function green(){
+
     // Only allows for green to appear when not blue
+
+
     if (colorName != "TestAreaBlue"){
       sTime()
       ChangeClassColor("TestAreaGreen", "TestAreaRed");
@@ -97,16 +101,15 @@ function ChangeClassColor(colorName, oldName){
 
 // Function to for achievements
 function achieve(){
-  if (t < 1000){
+  if (t < 300){
     console.log("Wow you're fast");
     popbox.style.display = "block";
 
   }
   else {
     // Nothing
+  }
 }
-}
-
 
 
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
@@ -167,23 +170,6 @@ document.addEventListener('keyup', function(event) {
           console.log(pressed);
           switchColor()
       }
-
-// Event listener for keyups
-document.addEventListener('keyup', function(event) {
-      if(event.keyCode == 32) {
-
-          pressed = "True";
-          console.log(pressed);
-          switchColor()
-      }
-
-
-});
-// Event listener for mouse clicks
- x.addEventListener('click', function(event) {
-      pressed = "True"
-      console.log(pressed);
-      switchColor()
 
 });
 // Event listener for mouse clicks
