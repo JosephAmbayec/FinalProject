@@ -6,8 +6,11 @@ var colorName;
 var oldName;
 var s;
 var e;
-var popbox = document.getElementById('myPopbox');
-var span = document.getElementsByClassName("close")[0];
+
+
+
+
+
 //Function to start timer
 function timer(){
   t = e - s;
@@ -17,14 +20,14 @@ function timer(){
 function sTime() {
    s = new Date();
    s.getMilliseconds();
-  console.log(s);
   }
 
 function eTime(){
    e = new Date();
    e.getMilliseconds();
-  console.log(e);
 }
+
+
 
 
 
@@ -43,19 +46,22 @@ window.addEventListener('resize',function(){
   recenter()
 });
 
+
+
+// Red function
 function changetoRed(){
   // Picks Random time
   var w = ((Math.random() * 5) + 2) * 1000;
   ChangeClassColor("TestAreaRed", "TestAreaBlue");
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
- console.log(w);
+
   setTimeout(function green(){
     // Only allows for green to appear when not blue
     if (colorName != "TestAreaBlue"){
       sTime()
       ChangeClassColor("TestAreaGreen", "TestAreaRed");
-      y.innerHTML = "Click!";
+      y.innerHTML = "Press!";
       colorName = "TestAreaGreen";
       return s;
     }
@@ -67,6 +73,7 @@ function changetoRed(){
 
 }
 
+// Function for switching to blue
 function changetoBlue(text){
 
   y.innerHTML = text;
@@ -87,11 +94,11 @@ function ChangeClassColor(colorName, oldName){
   return oldName
 }
 
-// Function to for achievements ALSO CREDIT TO W3 FOR POPBOX
+// Function to for achievements
 function achieve(){
-  if (t < 300){
+  if (t < 350){
     console.log("Wow you're fast");
-    popbox.style.display = "block";
+
   }
   else {
     // Nothing
@@ -104,51 +111,62 @@ function achieve(){
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
 
-x.onclick = function switchColor(){
 
- if (colorName == "TestAreaRed" && colorName != "TestAreaBlue") {
-      // When its red and clicked then:
-      ChangeClassColor("TestAreaBlue", "TestAreaRed");
-      changetoBlue("Clicked too early!");
+// Main switching color function
+function switchColor(){
+
+   if (colorName == "TestAreaRed" && colorName != "TestAreaBlue") {
+        // When its red and clicked then:
+        ChangeClassColor("TestAreaBlue", "TestAreaRed");
+        changetoBlue("Pressed too early!");
 
 
-  }
- else if (colorName == "TestAreaBlue" && colorName != "TestAreaRed"){
-        // When its blue and clicked then:
-
-        changetoRed();
     }
+   else if (colorName == "TestAreaBlue" && colorName != "TestAreaRed"){
+          // When its blue and clicked then:
 
- else if(colorName == "TestAreaGreen" && colorName != "TestAreaRed"){
-      // When its green and clicked then:
-      ChangeClassColor("TestAreaBlue", "TestAreaGreen");
-
-      eTime();
-
-      timer();
-      achieve()
-      changetoBlue(t + " ms. Click to go again");
-      span.onclick = function(){
-        popbox.style.display = "none";
+          changetoRed();
       }
-      window.onclick = function(event) {
-        if (event.target == popbox) {
-          popbox.style.display = "none";
-        }
-      }
-      return e;
- }
 
-  else{
-    console.log("Nothing");
+   else if(colorName == "TestAreaGreen" && colorName != "TestAreaRed"){
+        // When its green and clicked then:
+        ChangeClassColor("TestAreaBlue", "TestAreaGreen");
+
+        eTime();
+
+        timer();
+        achieve()
+        changetoBlue(t + " ms. Press to go again");
+        return e;
+   }
+
+    else{
+      console.log("Nothing");
+    }
   }
-}
+
+// Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
 
+// Event listener for keyups
+document.addEventListener('keyup', function(event) {
+      if(event.keyCode == 32) {
+
+          pressed = "True";
+          console.log(pressed);
+          switchColor()
+      }
 
 
 
+});
+// Event listener for mouse clicks
+ x.addEventListener('click', function(event) {
+      pressed = "True"
+      console.log(pressed);
+      switchColor()
 
+});
 
 recenter();
