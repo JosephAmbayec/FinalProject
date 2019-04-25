@@ -89,3 +89,14 @@ Added achievement
 Version: 0.9.8
 
 ~End of April 23~
+
+~Start of April 25~
+
+Changed colours
+Added spacebar functionality
+Bug fixes
+Disallowed text highlighting
+
+Version: 1.0.9
+
+~End of April 25~
