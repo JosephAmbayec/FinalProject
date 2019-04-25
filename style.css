@@ -1,5 +1,5 @@
 div.TestAreaBlue {
-  background-color: #5495ff;
+  background-color: #4880c4;
   cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
@@ -23,7 +23,7 @@ div.TestArea {
 }
 
 div.TestAreaRed {
-  background-color: #fc4137;
+  background-color: #b54141;
   cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
@@ -35,7 +35,7 @@ div.TestAreaRed {
 
 
 div.TestAreaGreen {
-  background-color: #0daf01;
+  background-color: #41b54c;
   cursor: pointer;
   display: inline-block;
   width: -webkit-fill-available;
@@ -104,4 +104,17 @@ p#Start {
 
 .popbox-content p {
   font-size: 50px
+}
+
+/* Credit to: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+
+/* disallows selecting */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
