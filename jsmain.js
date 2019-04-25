@@ -157,6 +157,16 @@ function switchColor(){
 // Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
+// Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+// Event listener for keyups
+document.addEventListener('keyup', function(event) {
+      if(event.keyCode == 32) {
+
+          pressed = "True";
+          console.log(pressed);
+          switchColor()
+      }
 
 // Event listener for keyups
 document.addEventListener('keyup', function(event) {
@@ -168,6 +178,12 @@ document.addEventListener('keyup', function(event) {
       }
 
 
+});
+// Event listener for mouse clicks
+ x.addEventListener('click', function(event) {
+      pressed = "True"
+      console.log(pressed);
+      switchColor()
 
 });
 // Event listener for mouse clicks
