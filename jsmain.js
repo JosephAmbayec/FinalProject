@@ -1,6 +1,9 @@
 //Setting up public vars that will be accessed later on
 var x = document.querySelector("div.TestArea");
 var y = document.querySelector("p#Start");
+var z = document.querySelector(".boxtext")
+var list = document.querySelector("ol")
+var img = document.getElementById("myImage")
 var w;
 var colorName;
 var oldName;
@@ -9,9 +12,19 @@ var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
-
-
-
+var intro = document.getElementById('myIntro');
+var introclose = document.getElementsByClassName("introclose")[0];
+// Intro popbox
+popbox.style.display = "block";
+img.style.display = "none";
+span.onclick = function(){
+  popbox.style.display = "none";
+}
+x.onclick = function(event) {
+  if (event.target == popbox) {
+    popbox.style.display = "none";
+  }
+}
 //Function to start timer
 function timer(){
   t = e - s;
@@ -40,8 +53,10 @@ function recenter(){
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
   var rheight  = innerHeight;
   rheight = parseInt(rheight);
+  rheight = rheight;
   lheight = Math.floor(rheight/50);
   elem.style.lineHeight = lheight;
+  console.log(lheight);
 }
 window.addEventListener('resize',function(){
   recenter()
@@ -101,10 +116,12 @@ function ChangeClassColor(colorName, oldName){
 
 // Function to for achievements
 function achieve(){
-  if (t < 300){
+  if (t < 400){
     console.log("Wow you're fast");
     popbox.style.display = "block";
-
+    z.innerText = "You got under 400ms! Here's a prize:";
+    list.style.display = "none";
+    img.style.display = "block";
   }
   else {
     // Nothing
@@ -144,7 +161,7 @@ function switchColor(){
         span.onclick = function(){
           popbox.style.display = "none";
         }
-        window.onclick = function(event) {
+        x.onclick = function(event) {
           if (event.target == popbox) {
             popbox.style.display = "none";
           }

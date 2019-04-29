@@ -103,7 +103,7 @@ p#Start {
 }
 
 .popbox-content p {
-  font-size: 50px
+  font-size: 30px;
 }
 
 /* Credit to: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
@@ -116,5 +116,5 @@ p#Start {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-                              
+
 }
