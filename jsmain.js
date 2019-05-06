@@ -67,7 +67,7 @@ window.addEventListener('resize',function(){
 // Red function
 function changetoRed(){
   // Picks Random time
-  var w = ((Math.random() * 5) + 2) * 1000;
+  var w = ((Math.random() * 5) + 3) * 1000;
   ChangeClassColor("TestAreaRed", "TestAreaBlue");
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
