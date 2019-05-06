@@ -1,3 +1,5 @@
+//Reaction Time Test by Joseph Ambayec
+
 //Setting up public vars that will be accessed later on
 var x = document.querySelector("div.TestArea");
 var y = document.querySelector("p#Start");
@@ -15,6 +17,8 @@ var test;
 var intro = document.getElementById('myIntro');
 var introclose = document.getElementsByClassName("introclose")[0];
 // Intro popbox
+
+// Credit to W3 popup box lesson
 popbox.style.display = "block";
 img.style.display = "none";
 span.onclick = function(){
@@ -25,7 +29,7 @@ x.onclick = function(event) {
     popbox.style.display = "none";
   }
 }
-//Function to start timer
+//Timer function
 function timer(){
   t = e - s;
   return t;
@@ -56,7 +60,6 @@ function recenter(){
   rheight = rheight;
   lheight = Math.floor(rheight/50);
   elem.style.lineHeight = lheight;
-  console.log(lheight);
 }
 window.addEventListener('resize',function(){
   recenter()
@@ -86,7 +89,7 @@ function changetoRed(){
       return s;
     }
     else {
-      console.log("Stopped green function");
+
     }
   }, w)
 
@@ -117,7 +120,6 @@ function ChangeClassColor(colorName, oldName){
 // Function to for achievements
 function achieve(){
   if (t < 400){
-    console.log("Wow you're fast");
     popbox.style.display = "block";
     z.innerText = "You got under 400ms! Here's a prize:";
     list.style.display = "none";
@@ -170,7 +172,6 @@ function switchColor(){
    }
 
     else{
-      console.log("Nothing");
     }
   }
 
@@ -184,7 +185,7 @@ document.addEventListener('keyup', function(event) {
       if(event.keyCode == 32) {
 
           pressed = "True";
-          console.log(pressed);
+
           switchColor()
       }
 
@@ -192,7 +193,7 @@ document.addEventListener('keyup', function(event) {
 // Event listener for mouse clicks
  x.addEventListener('click', function(event) {
       pressed = "True"
-      console.log(pressed);
+
       switchColor()
 
 });
