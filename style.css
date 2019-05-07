@@ -118,3 +118,7 @@ p#Start {
             user-select: none;
 
 }
+
+html {
+  background-color: black;
+}
