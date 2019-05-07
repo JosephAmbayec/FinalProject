@@ -16,6 +16,6 @@ My to-do list: https://trello.com/b/hIti3kzi/final-project
 
 
 
-#### Idea thought of: April 12th 2019
+#### Date idea thought of: April 12th 2019
 
 #### Created by: Joseph Ambayec
