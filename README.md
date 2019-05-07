@@ -1,4 +1,4 @@
-# FinalProject
+# Reaction Time Tester
 This is the final project for computer programming.
 
 Reation Time Tester
