@@ -82,10 +82,10 @@ function changetoRed(){
 
 
     if (colorName != "TestAreaBlue"){
-      sTime()
       ChangeClassColor("TestAreaGreen", "TestAreaRed");
       y.innerHTML = "Press!";
       colorName = "TestAreaGreen";
+      sTime()
       return s;
     }
     else {
