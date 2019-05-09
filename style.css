@@ -123,3 +123,7 @@ p#Start {
 html {
   background-color: black;
 }
+
+li {
+  font-size: 28px;
+}
