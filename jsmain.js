@@ -1,6 +1,11 @@
+//Reaction Time Test by Joseph Ambayec
+
 //Setting up public vars that will be accessed later on
 var x = document.querySelector("div.TestArea");
 var y = document.querySelector("p#Start");
+var z = document.querySelector(".boxtext")
+var list = document.querySelector("ol")
+var img = document.getElementById("myImage")
 var w;
 var colorName;
 var oldName;
@@ -9,10 +14,22 @@ var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
+var intro = document.getElementById('myIntro');
+var introclose = document.getElementsByClassName("introclose")[0];
+// Intro popbox
 
-
-
-//Function to start timer
+// Credit to W3 popup box lesson
+popbox.style.display = "block";
+img.style.display = "none";
+span.onclick = function(){
+  popbox.style.display = "none";
+}
+x.onclick = function(event) {
+  if (event.target == popbox) {
+    popbox.style.display = "none";
+  }
+}
+//Timer function
 function timer(){
   t = e - s;
   return t;
@@ -40,6 +57,7 @@ function recenter(){
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
   var rheight  = innerHeight;
   rheight = parseInt(rheight);
+  rheight = rheight;
   lheight = Math.floor(rheight/50);
   elem.style.lineHeight = lheight;
 }
@@ -52,7 +70,7 @@ window.addEventListener('resize',function(){
 // Red function
 function changetoRed(){
   // Picks Random time
-  var w = ((Math.random() * 5) + 2) * 1000;
+  var w = ((Math.random() * 5) + 3) * 1000;
   ChangeClassColor("TestAreaRed", "TestAreaBlue");
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
@@ -64,14 +82,14 @@ function changetoRed(){
 
 
     if (colorName != "TestAreaBlue"){
-      sTime()
       ChangeClassColor("TestAreaGreen", "TestAreaRed");
       y.innerHTML = "Press!";
       colorName = "TestAreaGreen";
+      sTime()
       return s;
     }
     else {
-      console.log("Stopped green function");
+
     }
   }, w)
 
@@ -101,10 +119,11 @@ function ChangeClassColor(colorName, oldName){
 
 // Function to for achievements
 function achieve(){
-  if (t < 300){
-    console.log("Wow you're fast");
+  if (t < 400){
     popbox.style.display = "block";
-
+    z.innerText = "You got under 400ms! Here's a prize:";
+    list.style.display = "none";
+    img.style.display = "block";
   }
   else {
     // Nothing
@@ -144,7 +163,7 @@ function switchColor(){
         span.onclick = function(){
           popbox.style.display = "none";
         }
-        window.onclick = function(event) {
+        x.onclick = function(event) {
           if (event.target == popbox) {
             popbox.style.display = "none";
           }
@@ -153,7 +172,6 @@ function switchColor(){
    }
 
     else{
-      console.log("Nothing");
     }
   }
 
@@ -167,7 +185,7 @@ document.addEventListener('keyup', function(event) {
       if(event.keyCode == 32) {
 
           pressed = "True";
-          console.log(pressed);
+
           switchColor()
       }
 
@@ -175,7 +193,7 @@ document.addEventListener('keyup', function(event) {
 // Event listener for mouse clicks
  x.addEventListener('click', function(event) {
       pressed = "True"
-      console.log(pressed);
+
       switchColor()
 
 });
