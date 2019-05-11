@@ -11,22 +11,34 @@ li {
   font-size: 28px;
 }
 
+a.links {
+  font-size: 20px;
+  background-color: #dfdfdf;
+  padding: 8px;
+}
+
 #Bar li {
   display: inline;
   float: left;
-    font-size: 20px;
+  font-size: 30px;
+  position: relative;
+  top: -13px;
 }
 
 #Bar li a {
   display: block;
   padding: 8px;
-  background-color: #a3a3a3;
+  background-color: #dddddd;
+  position: relative;
+
 }
 
 ul#Bar {
   padding: 0px;
-}
+  margin: 0px;
+  position: absolute;
 
+}
 
 h4 {
   font-size: 20px;

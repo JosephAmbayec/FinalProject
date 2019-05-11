@@ -74,10 +74,10 @@ p#Start {
 
 .popbox-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 43%;
   border-radius: 25px;
 }
 
@@ -131,7 +131,7 @@ li {
 #Bar li {
   display: inline;
   float: left;
-  font-size: 20px;
+  font-size: 30px;
   position: relative;
 
 }
