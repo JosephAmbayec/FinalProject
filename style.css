@@ -127,3 +127,26 @@ html {
 li {
   font-size: 28px;
 }
+
+#Bar li {
+  display: inline;
+  float: left;
+  font-size: 20px;
+  position: relative;
+
+}
+
+#Bar li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+  position: relative;
+
+}
+
+ul#Bar {
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+
+}
