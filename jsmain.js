@@ -14,9 +14,6 @@ var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
-var intro = document.getElementById('myIntro');
-var introclose = document.getElementsByClassName("introclose")[0];
-// Intro popbox
 
 // Credit to W3 popup box lesson
 popbox.style.display = "block";
@@ -66,7 +63,6 @@ window.addEventListener('resize',function(){
 });
 
 
-
 // Red function
 function changetoRed(){
   // Picks Random time
@@ -93,7 +89,6 @@ function changetoRed(){
     }
   }, w)
 
-
 }
 
 // Function for switching to blue
@@ -105,13 +100,11 @@ function changetoBlue(text){
 }
 
 
-
 //Function that allows me to switch classes and color
 function ChangeClassColor(colorName, oldName){
   x.classList.add(colorName);
   x.classList.remove(oldName);
   x = document.querySelector("div" + '.' + colorName);
-
 
   return colorName;
   return oldName
@@ -142,32 +135,23 @@ function switchColor(){
         // When its red and clicked then:
         ChangeClassColor("TestAreaBlue", "TestAreaRed");
         changetoBlue("Pressed too early!");
-
-
     }
    else if (colorName == "TestAreaBlue" && colorName != "TestAreaRed"){
           // When its blue and clicked then:
-
           changetoRed();
       }
 
    else if(colorName == "TestAreaGreen" && colorName != "TestAreaRed"){
         // When its green and clicked then:
         ChangeClassColor("TestAreaBlue", "TestAreaGreen");
-
+        // End timer
         eTime();
-
+        // Calc time
         timer();
-        achieve()
+        // Check if > 400ms
+        achieve();
         changetoBlue(t + " ms. Press to go again");
-        span.onclick = function(){
-          popbox.style.display = "none";
-        }
-        x.onclick = function(event) {
-          if (event.target == popbox) {
-            popbox.style.display = "none";
-          }
-        }
+
         return e;
    }
 
@@ -182,12 +166,12 @@ function switchColor(){
 
 // Event listener for keyups
 document.addEventListener('keyup', function(event) {
-      if(event.keyCode == 32) {
-
-          pressed = "True";
-
-          switchColor()
-      }
+  // Only allows spacebar to work if popbox is hidden
+  if (popbox.style.display == "none") {
+        if(event.keyCode == 32) {
+            switchColor()
+        }
+    }
 
 });
 // Event listener for mouse clicks

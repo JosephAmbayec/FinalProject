@@ -126,8 +126,18 @@ Added about page
 Added css
 Change some css
 Fixed bugs
-Pretified the layout
+Prettified the layout
 
 Version 3.1.5
 
 ~End of May 10~
+
+~Start of May 13~
+
+Disallowed spacebar from working when popup comes up.
+Tweaking
+Cleaned up code
+
+Version 3.1.6
+
+~End of May 13~
