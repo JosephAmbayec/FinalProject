@@ -181,7 +181,6 @@ function switchColor(){
 // Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
-// Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 // Event listener for keyups
 document.addEventListener('keyup', function(event) {
