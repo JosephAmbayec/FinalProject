@@ -141,9 +141,9 @@ function achieve(){
   }
 }
 
-
-var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 //Function that switch for Blue to Red
+var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
+
 
 
 // Main switching color function
