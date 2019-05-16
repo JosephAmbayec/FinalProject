@@ -112,12 +112,30 @@ function ChangeClassColor(colorName, oldName){
 
 // Function to for achievements
 function achieve(){
+  // Gold trophy
   if (t < 400){
     popbox.style.display = "block";
     z.innerText = "You got under 400ms! Here's a prize:";
     list.style.display = "none";
     img.style.display = "block";
+    img.src = "./images/gold.png"
   }
+  // Silver trophy
+  else if (t < 600 && t > 400){
+      popbox.style.display = "block";
+      z.innerText = "You got under 600ms! Here's a prize:";
+      list.style.display = "none";
+      img.style.display = "block";
+      img.src = "./images/silver.png"
+    }
+    // Bronze Trophy
+    else if (t < 900 && t > 600){
+        popbox.style.display = "block";
+        z.innerText = "You got under 900ms! Here's a prize:";
+        list.style.display = "none";
+        img.style.display = "block";
+        img.src = "./images/bronze.png"
+      }
   else {
     // Nothing
   }
@@ -156,6 +174,7 @@ function switchColor(){
    }
 
     else{
+      // Nothing
     }
   }
 

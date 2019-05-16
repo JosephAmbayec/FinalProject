@@ -141,3 +141,7 @@ Cleaned up code
 Version 3.1.6
 
 ~End of May 13~
+
+~Start of May 16~
+
+Added 2 more trophies, bronze and silver.
