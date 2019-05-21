@@ -26,7 +26,7 @@ x.onclick = function(event) {
     popbox.style.display = "none";
   }
 }
-//Timer function
+// Timer function
 function timer(){
   t = e - s;
   return t;
@@ -46,9 +46,9 @@ function eTime(){
 
 
 
-//Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
-//Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
-//Function allows for recenter text
+// Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
+// Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
+// Function allows for recenter text
 function recenter(){
   var elem  = document.querySelector('div')
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
@@ -100,7 +100,7 @@ function changetoBlue(text){
 }
 
 
-//Function that allows me to switch classes and color
+// Function that allows me to switch classes and color
 function ChangeClassColor(colorName, oldName){
   x.classList.add(colorName);
   x.classList.remove(oldName);
@@ -141,7 +141,7 @@ function achieve(){
   }
 }
 
-//Function that switch for Blue to Red
+// Function that switch for Blue to Red
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
 
 
