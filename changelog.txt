@@ -144,8 +144,12 @@ Version 3.1.6
 
 ~Start of May 16~
 
-Added 2 more trophies, bronze and silver.
+Added 2 more trophies; bronze and silver.
 
 Version 3.2.1
 
 ~End of May 16~
+
+~Start of May 21~
+
+More minor additions
