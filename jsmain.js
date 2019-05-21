@@ -113,7 +113,7 @@ function ChangeClassColor(colorName, oldName){
 // Function to for achievements
 function achieve(){
   // Gold trophy
-  if (t < 400){
+  if (t <= 400){
     popbox.style.display = "block";
     z.innerText = "You got under 400ms! Here's a prize:";
     list.style.display = "none";
@@ -121,7 +121,7 @@ function achieve(){
     img.src = "./images/gold.png"
   }
   // Silver trophy
-  else if (t < 600 && t > 400){
+  else if (t <= 600 && t > 400){
       popbox.style.display = "block";
       z.innerText = "You got under 600ms! Here's a prize:";
       list.style.display = "none";
@@ -129,7 +129,7 @@ function achieve(){
       img.src = "./images/silver.png"
     }
     // Bronze Trophy
-    else if (t < 1200 && t > 600){
+    else if (t <= 1200 && t > 600){
         popbox.style.display = "block";
         z.innerText = "You got under 1200ms! Here's a prize:";
         list.style.display = "none";
