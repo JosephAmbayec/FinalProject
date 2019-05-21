@@ -153,3 +153,6 @@ Version 3.2.1
 ~Start of May 21~
 
 More minor additions
+Added website icon
+
+~End of May 21~
