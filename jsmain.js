@@ -129,9 +129,9 @@ function achieve(){
       img.src = "./images/silver.png"
     }
     // Bronze Trophy
-    else if (t < 900 && t > 600){
+    else if (t < 1200 && t > 600){
         popbox.style.display = "block";
-        z.innerText = "You got under 900ms! Here's a prize:";
+        z.innerText = "You got under 1200ms! Here's a prize:";
         list.style.display = "none";
         img.style.display = "block";
         img.src = "./images/bronze.png"
