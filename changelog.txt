@@ -158,3 +158,13 @@ Added website icon
 Version 3.3.5A
 
 ~End of May 21~
+
+~Start of May 23~
+
+Ready to push this to release
+Bugs fixed for the most part
+Stable enough for release
+
+Version 1.0.0. release
+
+~End of May 23~
