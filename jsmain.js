@@ -204,6 +204,7 @@ function switchColor(){
 
 
 // Event listener for keyups
+//Check for spacebar release and then calls if statement
 document.addEventListener('keyup', function(event) {
   // Only allows spacebar to work if popbox is hidden
   if (popbox.style.display == "none") {
