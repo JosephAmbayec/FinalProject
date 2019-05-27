@@ -19,6 +19,7 @@ var musicstop = document.querySelector("img#stop");
 var music = new Audio('./lonescavengerV2.wav');
 var playing;
 music.loop = true;
+playing = "true";
 // Credit to W3 popup box lesson
 musicstop.onclick = function(){
   if (playing == "true"){
@@ -36,8 +37,10 @@ popbox.style.display = "block";
 img.style.display = "none";
 span.onclick = function(){
   popbox.style.display = "none";
-  music.play()
-  playing = "true";
+  if(playing == "true"){
+    music.play()
+    playing = "true";
+  }
 }
 x.onclick = function(event) {
   if (event.target == popbox) {
