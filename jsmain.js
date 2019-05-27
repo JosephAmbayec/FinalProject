@@ -20,7 +20,7 @@ var music = new Audio('./lonescavengerV2.wav');
 var playing;
 music.loop = true;
 playing = "true";
-// Credit to W3 popup box lesson
+
 musicstop.onclick = function(){
   if (playing == "true"){
   music.pause();
@@ -33,6 +33,7 @@ else if (playing == "false"){
   musicstop.src = "./images/unmute.png";
   }
 }
+// Credit to https://www.w3schools.com/howto/howto_css_modals.asp
 popbox.style.display = "block";
 img.style.display = "none";
 span.onclick = function(){
@@ -42,9 +43,13 @@ span.onclick = function(){
     playing = "true";
   }
 }
-x.onclick = function(event) {
+window.onclick = function(event) {
   if (event.target == popbox) {
     popbox.style.display = "none";
+    if(playing == "true"){
+      music.play()
+      playing = "true";
+    }
   }
 }
 // Timer function
@@ -52,12 +57,12 @@ function timer(){
   t = e - s;
   return t;
 }
-
+// Time when green appears
 function sTime() {
    s = new Date();
    s.getMilliseconds();
   }
-
+// Time when player clicks
 function eTime(){
    e = new Date();
    e.getMilliseconds();
