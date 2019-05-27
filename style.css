@@ -1,3 +1,8 @@
+img#stop {
+  display: block;
+  padding-left: 8px;
+}
+
 div.TestAreaBlue {
   background-color: #4880c4;
   cursor: pointer;
@@ -141,7 +146,11 @@ li {
   padding: 8px;
   background-color: #dddddd;
   position: relative;
-      border-top-left-radius: 10px;
+
+}
+
+#about a {
+  border-top-left-radius: 10px;
 }
 
 ul#Bar {

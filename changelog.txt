@@ -168,3 +168,12 @@ Stable enough for release
 Version 1.0.0. release
 
 ~End of May 23~
+
+~Start of May 26~
+
+Added sounds and music!
+Final polishes!
+
+Version 1.0.1-r
+
+~End of May 27~

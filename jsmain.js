@@ -14,12 +14,30 @@ var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
-
+var musicstop = document.querySelector("img#stop");
+// I composed this music
+var music = new Audio('./lonescavengerV2.wav');
+var playing;
+music.loop = true;
 // Credit to W3 popup box lesson
+musicstop.onclick = function(){
+  if (playing == "true"){
+  music.pause();
+  playing = "false";
+  musicstop.src = "./images/mute.png";
+}
+else if (playing == "false"){
+  music.play()
+  playing = "true";
+  musicstop.src = "./images/unmute.png";
+  }
+}
 popbox.style.display = "block";
 img.style.display = "none";
 span.onclick = function(){
   popbox.style.display = "none";
+  music.play()
+  playing = "true";
 }
 x.onclick = function(event) {
   if (event.target == popbox) {
@@ -188,6 +206,9 @@ document.addEventListener('keyup', function(event) {
   if (popbox.style.display == "none") {
         if(event.keyCode == 32) {
             switchColor()
+            // Credit for sound: http://soundbible.com/2067-Blop.html
+            var blop = new Audio('./blop.wav');
+            blop.play();
         }
     }
 
@@ -195,7 +216,9 @@ document.addEventListener('keyup', function(event) {
 // Event listener for mouse clicks
  x.addEventListener('click', function(event) {
       pressed = "True"
-
+      // Credit for sound: http://soundbible.com/2067-Blop.html
+      var blop = new Audio('./blop.wav');
+      blop.play();
       switchColor()
 
 });
