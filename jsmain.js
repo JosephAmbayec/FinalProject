@@ -14,32 +14,55 @@ var e;
 var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
-var intro = document.getElementById('myIntro');
-var introclose = document.getElementsByClassName("introclose")[0];
-// Intro popbox
+var musicstop = document.querySelector("img#stop");
+// I composed this music
+var music = new Audio('./lonescavengerV2.wav');
+var playing;
+music.loop = true;
+playing = "true";
 
-// Credit to W3 popup box lesson
+musicstop.onclick = function(){
+  if (playing == "true"){
+  music.pause();
+  playing = "false";
+  musicstop.src = "./images/mute.png";
+}
+else if (playing == "false"){
+  music.play()
+  playing = "true";
+  musicstop.src = "./images/unmute.png";
+  }
+}
+// Credit to https://www.w3schools.com/howto/howto_css_modals.asp
 popbox.style.display = "block";
 img.style.display = "none";
 span.onclick = function(){
   popbox.style.display = "none";
-}
-x.onclick = function(event) {
-  if (event.target == popbox) {
-    popbox.style.display = "none";
+  if(playing == "true"){
+    music.play()
+    playing = "true";
   }
 }
-//Timer function
+window.onclick = function(event) {
+  if (event.target == popbox) {
+    popbox.style.display = "none";
+    if(playing == "true"){
+      music.play()
+      playing = "true";
+    }
+  }
+}
+// Timer function
 function timer(){
   t = e - s;
   return t;
 }
-
+// Time when green appears
 function sTime() {
    s = new Date();
    s.getMilliseconds();
   }
-
+// Time when player clicks
 function eTime(){
    e = new Date();
    e.getMilliseconds();
@@ -49,9 +72,9 @@ function eTime(){
 
 
 
-//Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
-//Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
-//Function allows for recenter text
+// Credit for finding height: https://plainjs.com/javascript/styles/set-and-get-css-styles-of-elements-53/
+// Idea for window resize: https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView/resize_event
+// Function allows for recenter text
 function recenter(){
   var elem  = document.querySelector('div')
   var style = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
@@ -64,7 +87,6 @@ function recenter(){
 window.addEventListener('resize',function(){
   recenter()
 });
-
 
 
 // Red function
@@ -93,7 +115,6 @@ function changetoRed(){
     }
   }, w)
 
-
 }
 
 // Function for switching to blue
@@ -105,13 +126,11 @@ function changetoBlue(text){
 }
 
 
-
-//Function that allows me to switch classes and color
+// Function that allows me to switch classes and color
 function ChangeClassColor(colorName, oldName){
   x.classList.add(colorName);
   x.classList.remove(oldName);
   x = document.querySelector("div" + '.' + colorName);
-
 
   return colorName;
   return oldName
@@ -119,20 +138,38 @@ function ChangeClassColor(colorName, oldName){
 
 // Function to for achievements
 function achieve(){
-  if (t < 400){
+  // Gold trophy
+  if (t <= 400){
     popbox.style.display = "block";
     z.innerText = "You got under 400ms! Here's a prize:";
     list.style.display = "none";
     img.style.display = "block";
+    img.src = "./images/gold.png"
   }
+  // Silver trophy
+  else if (t <= 600 && t > 400){
+      popbox.style.display = "block";
+      z.innerText = "You got under 600ms! Here's a prize:";
+      list.style.display = "none";
+      img.style.display = "block";
+      img.src = "./images/silver.png"
+    }
+    // Bronze Trophy
+    else if (t <= 1200 && t > 600){
+        popbox.style.display = "block";
+        z.innerText = "You got under 1200ms! Here's a prize:";
+        list.style.display = "none";
+        img.style.display = "block";
+        img.src = "./images/bronze.png"
+      }
   else {
     // Nothing
   }
 }
 
-
+// Function that switch for Blue to Red
 var colorName = ChangeClassColor("TestAreaBlue", "TestArea");
-//Function that switch for Blue to Red
+
 
 
 // Main switching color function
@@ -142,58 +179,55 @@ function switchColor(){
         // When its red and clicked then:
         ChangeClassColor("TestAreaBlue", "TestAreaRed");
         changetoBlue("Pressed too early!");
-
-
     }
    else if (colorName == "TestAreaBlue" && colorName != "TestAreaRed"){
           // When its blue and clicked then:
-
           changetoRed();
       }
 
    else if(colorName == "TestAreaGreen" && colorName != "TestAreaRed"){
         // When its green and clicked then:
         ChangeClassColor("TestAreaBlue", "TestAreaGreen");
-
+        // End timer
         eTime();
-
+        // Calc time
         timer();
-        achieve()
+        // Check if > 400ms
+        achieve();
         changetoBlue(t + " ms. Press to go again");
-        span.onclick = function(){
-          popbox.style.display = "none";
-        }
-        x.onclick = function(event) {
-          if (event.target == popbox) {
-            popbox.style.display = "none";
-          }
-        }
+
         return e;
    }
 
     else{
+      // Nothing
     }
   }
 
 // Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
-// Credit for event listener, https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 // Event listener for keyups
+//Check for spacebar release and then calls if statement
 document.addEventListener('keyup', function(event) {
-      if(event.keyCode == 32) {
-
-          pressed = "True";
-
-          switchColor()
-      }
+  // Only allows spacebar to work if popbox is hidden
+  if (popbox.style.display == "none") {
+        if(event.keyCode == 32) {
+            switchColor()
+            // Credit for sound: http://soundbible.com/2067-Blop.html
+            var blop = new Audio('./blop.wav');
+            blop.play();
+        }
+    }
 
 });
 // Event listener for mouse clicks
  x.addEventListener('click', function(event) {
       pressed = "True"
-
+      // Credit for sound: http://soundbible.com/2067-Blop.html
+      var blop = new Audio('./blop.wav');
+      blop.play();
       switchColor()
 
 });

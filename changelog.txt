@@ -29,7 +29,7 @@ Idea for millisecond function:
 
 Added main html and css components.
 Added click functionality in javascript
-Version: 0.2.0
+Version: 0.2.0A
 
 ~End of April 12~
 
@@ -39,7 +39,7 @@ Added a better colour switching mechanism
 Debugging
 Working switch between red and blue!
 
-Version: 0.3.9
+Version: 0.3.9A
 
 ~End of April 13~
 
@@ -47,7 +47,7 @@ Version: 0.3.9
 
 Added better margin flow and colours allowing for resizable button while coding!
 
-Version: 0.4.3
+Version: 0.4.3A
 
 ~End of April 14~
 
@@ -63,7 +63,7 @@ Added resizable text and button areas!
 Button changes to size of browser! (Chrome only)
 Auto recenter text!
 
-Version: 0.5.5
+Version: 0.5.5A
 
 ~End of April 16~
 
@@ -74,7 +74,7 @@ Added random time interval
 Added timer
 Base javascript is finish (for now)
 
-Version: 0.6.3
+Version: 0.6.3A
 
 ~End of April 18~
 
@@ -86,7 +86,7 @@ Started achievement functionality
 Added popup box
 Added achievement
 
-Version: 0.9.8
+Version: 0.9.8A
 
 ~End of April 23~
 
@@ -97,7 +97,7 @@ Added spacebar functionality
 Bug fixes
 Disallowed text highlighting
 
-Version: 1.0.9
+Version: 1.0.9A
 
 ~End of April 25~
 
@@ -107,7 +107,7 @@ Added rules popbox
 Switch styles between popboxes
 Bug fixes
 
-Version: 1.1.8
+Version: 1.1.8A
 
 ~End of April 29~
 
@@ -115,7 +115,7 @@ Version: 1.1.8
 
 Bug fixes
 
-Version: 1.1.9
+Version: 1.1.9A
 
 ~End of May 5~
 
@@ -126,8 +126,54 @@ Added about page
 Added css
 Change some css
 Fixed bugs
-Pretified the layout
+Prettified the layout
 
-Version 3.1.5
+Version 3.1.5A
 
 ~End of May 10~
+
+~Start of May 13~
+
+Disallowed spacebar from working when popup comes up.
+Tweaking
+Cleaned up code
+
+Version 3.1.6A
+
+~End of May 13~
+
+~Start of May 16~
+
+Added 2 more trophies; bronze and silver.
+
+Version 3.2.1A
+
+~End of May 16~
+
+~Start of May 21~
+
+More minor additions
+Added website icon
+
+Version 3.3.5A
+
+~End of May 21~
+
+~Start of May 23~
+
+Ready to push this to release
+Bugs fixed for the most part
+Stable enough for release
+
+Version 1.0.0. release
+
+~End of May 23~
+
+~Start of May 26~
+
+Added sounds and music!
+Final polishes!
+
+Version 1.0.1-r
+
+~End of May 27~
