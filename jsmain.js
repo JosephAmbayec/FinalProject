@@ -15,24 +15,29 @@ var popbox = document.getElementById('myPopbox');
 var span = document.getElementsByClassName("close")[0];
 var test;
 var musicstop = document.querySelector("img#stop");
+
 // I composed this music
 var music = new Audio('./lonescavengerV2.wav');
 var playing;
 music.loop = true;
 playing = "true";
 
+// Music actions
 musicstop.onclick = function(){
   if (playing == "true"){
-  music.pause();
-  playing = "false";
-  musicstop.src = "./images/mute.png";
+    // Only pause song if song is already playing
+    music.pause();
+    playing = "false";
+    musicstop.src = "./images/mute.png";
 }
 else if (playing == "false"){
-  music.play()
-  playing = "true";
-  musicstop.src = "./images/unmute.png";
+    // Only plays song if song isn't playing
+    music.play()
+    playing = "true";
+    musicstop.src = "./images/unmute.png";
   }
 }
+
 // Credit to https://www.w3schools.com/howto/howto_css_modals.asp
 popbox.style.display = "block";
 img.style.display = "none";
@@ -43,6 +48,7 @@ span.onclick = function(){
     playing = "true";
   }
 }
+// If user clicks outside of box, hide box.
 window.onclick = function(event) {
   if (event.target == popbox) {
     popbox.style.display = "none";
@@ -52,16 +58,19 @@ window.onclick = function(event) {
     }
   }
 }
+
 // Timer function
 function timer(){
   t = e - s;
   return t;
 }
+
 // Time when green appears
 function sTime() {
    s = new Date();
    s.getMilliseconds();
   }
+
 // Time when player clicks
 function eTime(){
    e = new Date();
@@ -97,12 +106,12 @@ function changetoRed(){
   colorName = "TestAreaRed"
   y.innerHTML = "Wait for the green to appear!";
 
-
+// Timeout for green after random amount of time
   var test = setTimeout(function green(){
 
     // Only allows for green to appear when not blue
 
-
+   // Switch colour from red to green
     if (colorName != "TestAreaBlue"){
       ChangeClassColor("TestAreaGreen", "TestAreaRed");
       y.innerHTML = "Press!";
@@ -119,7 +128,6 @@ function changetoRed(){
 
 // Function for switching to blue
 function changetoBlue(text){
-
   y.innerHTML = text;
   colorName = "TestAreaBlue";
 
@@ -192,8 +200,9 @@ function switchColor(){
         eTime();
         // Calc time
         timer();
-        // Check if > 400ms
+        // Checks achieve function
         achieve();
+        // Change to Blue
         changetoBlue(t + " ms. Press to go again");
 
         return e;
@@ -231,5 +240,5 @@ document.addEventListener('keyup', function(event) {
       switchColor()
 
 });
-
+// Check for window resize
 recenter();
